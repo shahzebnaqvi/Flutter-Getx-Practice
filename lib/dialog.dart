@@ -12,7 +12,8 @@ class Dialogclass extends StatelessWidget {
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           ElevatedButton(
               onPressed: () {
-                Get.defaultDialog();
+                Get.defaultDialog(
+                    textCancel: "d", textConfirm: "d", textCustom: "ds");
               },
               child: Text("Snackbar")),
         ]),
