@@ -12,7 +12,35 @@ class Bottom extends StatelessWidget {
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           ElevatedButton(
               onPressed: () {
-                Get.bottomSheet(Container(child: ListTile,)
+                Get.bottomSheet(
+                  Container(
+                    child: Wrap(children: [
+                      ListTile(
+                        title: Text("Dark"),
+                        onTap: () => {Get.changeTheme(ThemeData.dark())},
+                      ),
+                      ListTile(
+                        title: Text("Light"),
+                        onTap: () => {Get.changeTheme(ThemeData.light())},
+                      ),
+                      ListTile(
+                        title: Text("None"),
+                        onTap: () => {},
+                      )
+                    ]),
+                  ),
+                  backgroundColor: Colors.blue,
+                  barrierColor: Colors.grey,
+                  isDismissible: true,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                    side: BorderSide(
+                        style: BorderStyle.solid,
+                        color: Colors.green,
+                        width: 2),
+                  ),
+                  enableDrag: true,
+                );
               },
               child: Text("Snackbar")),
         ]),

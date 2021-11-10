@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:getxpractice/bottom.dart';
 import 'package:getxpractice/snackbar.dart';
 import 'package:getxpractice/dialog.dart';
 
@@ -11,6 +12,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Dialogclass();
+    return Bottom();
   }
 }
